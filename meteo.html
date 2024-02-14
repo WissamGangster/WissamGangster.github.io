@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <meta charset="UTF-8">
+		 <link rel="stylesheet" href="./style.css">
+		 <script src="./fonctions.js"></script>
+	</head>
+	
+	<body>
+		<header>
+			<H1> TD n°1 Programmation web - Application météo </H1>
+		</header>
+		
+		<Br>
+		<label>Choisir une ville : </label>
+		<br>
+		<select id="VilleChoisie" onChange ="afficheVille()">
+			<Option>Niort</option>
+			<Option>Rio de Janeiro</option>
+			<Option>Reykjavik</option>
+		</select>
+		
+		<div class="Villes">
+		    <div id="Niort" class="Ville">
+				 <h2>Niort</h2>
+				 <p>12°, pluvieux</p>
+				 <img src="pluvieux.png" width="15%"/>
+			</div>
+			
+			<div id="Rio de Janeiro" class="Ville">
+				 <h2>Rio de Janeiro</h2>
+				 <p>29°, orageux</p>
+				 <img src="orageux.png" width="15%"/>
+			</div>
+			
+			<div id="Reykjavik" class="Ville">
+				 <h2>Reykjavik</h2>
+				 <p>-10°, ensoleillé</p>
+				 <img src="ensoleille.png" width="15%"/>
+			</div>
+		</div>
+			
+	</body>
+
+	<footer>
+        <p>&copy; 2024 Université de Poitiers. Tous droits réservés.</p>
+	</footer>
+	
+</html>
