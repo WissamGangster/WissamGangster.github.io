@@ -1,0 +1,19 @@
+header{
+  padding: 30px;
+  text-align: center;
+  background: #000;
+  color: white;
+  font-size: 15px;
+}
+
+.Villes {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-evenly;
+	background-color:lightgrey;
+}
+
+.Villes div {
+	width: 400px;
+	text-align: center;
+}
