@@ -24,7 +24,22 @@
 		    <div id="Niort" class="Ville">
 				 <h2>Niort</h2>
 				 <p>12°, pluvieux</p>
-				 <img src="pluvieux.png" width="15%"/>
+				 <ul id="NiortAPI"> </ul>
+				<script>
+				const ulElement = document.querySelector("ul");
+
+				fetch("https://api.openweathermap.org/data/2.5/weather?lat=46.3167&lon=-0.4667&appid=eccf8200898239c01b81626293da9f1d")
+					.then((response) => response.json())
+					.then((data) => {
+						const temperatureKelvin = data.main.temp;
+						const temperatureCelsius = temperatureKelvin - 273.15;
+						const liElement = document.createElement("li");
+						liElement.innerText = `Température à ${data.name}: ${temperatureCelsius.toFixed(2)} °C`;
+						ulElement.appendChild(liElement);
+					})
+					.catch((error) => console.error("Error fetching data:", error));
+			</script>
+					<img src="pluvieux.png" width="15%"/>
 			</div>
 			
 			<div id="Rio de Janeiro" class="Ville">
